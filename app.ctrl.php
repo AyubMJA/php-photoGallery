@@ -33,18 +33,18 @@ while( false !== ( $DIR = readdir($fp) ) ) {
   $numGal++;
 }
 
-$TLP['photo'] = $photo;
-$TLP['tlp'] = array("allphotos"=>0);
+$TPL['photo'] = $photo;
+$TPL['tpl'] = array("allphotos"=>0);
 
 switch($_REQUEST['act']){
   case 'more':
-    $TLP['tlp']["allphotos"] = 0;
-    $TLP['tlp'] +=["id"=>$_REQUEST["id"]];
+    $TPL['tpl']["allphotos"] = 0;
+    $TPL['tpl'] +=["id"=>$_REQUEST["id"]];
     break;
   case 'enlarge':
-    $TLP['tlp']["allphotos"] = 2;
-    $TLP['tlp']["allphotos"] = $_REQUEST["id"];
-    $TLP['tlp'] +=["enlargeid"=>$_REQUEST["enlargeid"]];
+    $TPL['tpl']["allphotos"] = 2;
+    $TPL['tpl']["allphotos"] = $_REQUEST["id"];
+    $TPL['tpl'] +=["enlargeid"=>$_REQUEST["enlargeid"]];
     break;
   default:
     $TPL['tpl']["allphotos"] = 1;
