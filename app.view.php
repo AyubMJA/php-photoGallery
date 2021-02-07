@@ -11,6 +11,7 @@
 </head>
 
 <body>
+<!-- Page title -->
     <header>
         <div class="container">
             <h1 class="font-weight-light">
@@ -18,27 +19,23 @@
             </h1>
         </div>
     </header>
-    <div class="jumbotron jumbotron-fluid">
+    <main>
         <div class="row">
-            <?php
-                if($TPL['tpl']['allphotos'] == 1){
-                    foreach($TPL['photoData'] as $key1 => $value1)
-                   {
-                       $src = "photos/".$value1["directory"]."/thumbs/".$value1["photos"][count($value1["photos"]) - 1];
-                       ?>
-                       <div class="col-lg-4 col-sm-6">
-                           <a href="app.ctrl.php?act=more&id=<?=$key1?>" class="d-block mb-4 h-100">
-                           <div class="thumbnail">
-                               <img src="<?=$src?>" class="img-fluid img-thumbnail" >
-                           </div>
-                           </a>
-                       </div>
-                       <?php
-                   } 
-                }
+            <?php if($TPL['tpl']["allphotos"] == 1){
+                {
+                    $src = "photos/".$value1["directory"]."/thumbs/".value1["photos"][count($value1["photos"]) - 1];
             ?>
+            <div class="col-lg-4 col-sm-6">
+                <a href="app.ctrl.php?act=more&id=<?=$key1?>"class="d-block mb-4 h-100">
+                <div class="thumbnail">
+                    
+                </div>
+            </a>
+            </div>
+                }
+            <?php}?>
         </div>
-    </div>
+    </main>
 </body>
 
 </html>

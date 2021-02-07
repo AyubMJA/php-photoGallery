@@ -33,7 +33,7 @@ while( false !== ( $DIR = readdir($fp) ) ) {
   $numGal++;
 }
 
-$TPL['photo'] = $photo;
+$TPL['photoData'] = $photoData;
 $TPL['tpl'] = array("allphotos"=>0);
 
 switch($_REQUEST['act']){
@@ -43,7 +43,7 @@ switch($_REQUEST['act']){
     break;
   case 'enlarge':
     $TPL['tpl']["allphotos"] = 2;
-    $TPL['tpl']["allphotos"] = $_REQUEST["id"];
+    $TPL['tpl']["id"] = $_REQUEST["id"];
     $TPL['tpl'] +=["enlargeid"=>$_REQUEST["enlargeid"]];
     break;
   default:
@@ -55,7 +55,7 @@ include 'app.view.php';
 ?>
 
 <!-- Let's look at the contents of $photoData...  -->
-<pre><?php print_r($photoData); ?></pre>
+<!-- <pre><?php print_r($photoData); ?></pre> -->
 
 
 
