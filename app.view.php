@@ -28,12 +28,12 @@
             <div class="col-lg-4 col-sm-6">
                 <a href="app.ctrl.php?act=more&id=<?=$key1?>"class="d-block mb-4 h-100">
                 <div class="thumbnail">
-                    
+                    <img src="<?=$src?>" class="img-fluid img-thumbnail" alt="imgs">
+                    <div class="caption" style="text-align:center;text-decoration:none"><?php echo $value1["description"];?></div>
                 </div>
             </a>
             </div>
-                }
-            <?php}?>
+            <?php }}?>
         </div>
     </main>
 </body>
